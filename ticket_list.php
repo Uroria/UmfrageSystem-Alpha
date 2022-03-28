@@ -15,10 +15,10 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Date Created</th>
+						<th>Erstellt am</th>
 						<th>Ticket</th>
-						<th>Subject</th>
-						<th>Description</th>
+						<th>Betreff</th>
+						<th>Beschreibung</th>
 						<th>Status</th>
 						<th>Action</th>
 					</tr>
@@ -46,13 +46,13 @@
 						<td><b class="truncate"><?php echo strip_tags($desc) ?></b></td>
 						<td>
 							<?php if($row['status'] == 0): ?>
-								<span class="badge badge-primary">Pending/Open</span>
+								<span class="badge badge-primary">Offen</span>
 							<?php elseif($row['status'] == 1): ?>
-								<span class="badge badge-Info">Processing</span>
+								<span class="badge badge-Info">In Arbeit</span>
 							<?php elseif($row['status'] == 2): ?>
-								<span class="badge badge-success">Done</span>
+								<span class="badge badge-success">Fertig</span>
 							<?php else: ?>
-								<span class="badge badge-secondary">Closed</span>
+								<span class="badge badge-secondary">Geschlossen</span>
 							<?php endif; ?>
 						</td>
 						<td class="text-center">
@@ -60,11 +60,11 @@
 		                      Action
 		                    </button>
 		                    <div class="dropdown-menu" style="">
-		                      <a class="dropdown-item view_ticket" href="./index.php?page=view_ticket&id=<?php echo $row['id'] ?>" data-id="<?php echo $row['id'] ?>">View</a>
+		                      <a class="dropdown-item view_ticket" href="./index.php?page=view_ticket&id=<?php echo $row['id'] ?>" data-id="<?php echo $row['id'] ?>">Ansehen</a>
 		                      <div class="dropdown-divider"></div>
-		                      <a class="dropdown-item" href="./index.php?page=edit_ticket&id=<?php echo $row['id'] ?>">Edit</a>
+		                      <a class="dropdown-item" href="./index.php?page=edit_ticket&id=<?php echo $row['id'] ?>">Bearbeiten</a>
 		                      <div class="dropdown-divider"></div>
-		                      <a class="dropdown-item delete_ticket" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">Delete</a>
+		                      <a class="dropdown-item delete_ticket" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">löschen</a>
 		                    </div>
 						</td>
 					</tr>	
