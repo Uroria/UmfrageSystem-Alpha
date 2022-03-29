@@ -20,9 +20,9 @@
 					<tr>
 						<th class="text-center">#</th>
 						<th>Titel</th>
-						<th>Beschreibung</th>
-						<th>Startet am</th>
-						<th>Endet am</th>
+						<th>Beschreibung:</th>
+						<th>Startet am:</th>
+						<th>Endet am:</th>
 						<th>Action</th>
 					</tr>
 				</thead>
